@@ -11,7 +11,7 @@ namespace Chicago.Dal
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("chicago");
+            modelBuilder.HasDefaultSchema("dbo");
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
