@@ -71,11 +71,13 @@ namespace Chicago.Api
 
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseCors("spa");
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            
         }
     }
 }

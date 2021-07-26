@@ -6,7 +6,10 @@ namespace Chicago.Bll
     {
         public ChicagoMappingProfile()
         {
-            CreateMap<Dal.Models.Item, Dto.Item>().ReverseMap();
+            CreateMap<Dal.Models.Item, Dto.Item>()
+                .ForMember(destination => destination.TypeValue, opt => opt.MapFrom(source =>
+                    source.Type.ToString()))
+                .ReverseMap();
         }
     }
 }
