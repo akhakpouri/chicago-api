@@ -1,9 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using Chicago.Bll.Dto;
+using System.Threading.Tasks;
 
 namespace Chicago.Bll.Managers
 {
-    public interface INetworthManager
+    public interface INetworthManager : IChicagoManager<Networth>
     {
-        Task<double> Calculate();
+        Task<double> Calculate(int networthId);
     }
 }
